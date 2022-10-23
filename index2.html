@@ -1,0 +1,51 @@
+<html lang="jp">
+    <head>
+    <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+html, body {
+    margin: 5px;
+    padding: 0;
+}
+　　　　.Frame{
+　　　　　  width: 320px;
+　　　　　  border: 1px solid #ff6a00;
+　　　　　  background-color: #ffee8e;
+　　　　　}
+　　　　　.Frame2{
+　　　　　  width: 320px;
+　　　　　  border :5px solid #000000;
+　　　　　  background-color :#ffee8e;    
+　　　　　}
+　　　　　.red{
+　　　　　    color:red;
+　　　　　}
+</style>
+    </head>
+    <body>
+        
+        <div id="app" class="Frame">
+            <p>{{ number }}</p>
+            <button v-on:click="CountUp">カウントアップ</button>
+            <div v-if="number">条件次第で表示</div>
+            <div v-bind:class="color">カラー</div>
+        </div>
+  <script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    number: 0,
+    color: 'red'
+  },
+  methods: {
+    CountUp: function () {
+      var elem = document.getElementById("app");
+      elem.style.border = "2px dotted #00bfa5";
+      elem.style.backgroundColor = "#c3ebff";
+    }
+  }
+})
+
+  </script>
+  </body>
+</html>
