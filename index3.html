@@ -40,3 +40,24 @@ Vue.createApp({
     }
 }).mount('#app')
   </script>
+
+@click="active(true)"
+
+@click="active(false)"
+
+active(){
+this.isActive = !this.isActive;
+}
+
+
+showFranPanel: false,
+          <template v-if="!showFranPanel">
+            <div class="map-button radar-mode-button radar-mode-button-on" @click="changeShowFranPanel(true)">
+              <img :src="require('@/assets/img/icon_radar-mode-on.svg')">
+            </div>
+          </template>
+          <template v-else>
+            <div class="map-button radar-mode-button radar-mode-button-off" @click="changeShowFranPanel(false)">
+              <img :src="require('@/assets/img/icon_radar-mode-off.svg')">
+            </div>
+          </template>
