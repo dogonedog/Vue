@@ -1,0 +1,26 @@
+<html lang="jp">
+    <head>
+    <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <button @click="active"Å@v-if="isActive">Click Me!</button>
+            <div v-else>êÿÇËë÷Ç¶å„Ç…ï\é¶Ç≥ÇÍÇÈóvëf</div>
+        </div>
+  <script>
+new Vue({
+  el: "#app",
+  data: {
+        isActive: true
+    },
+    methods: {
+        active: function () {
+            this.isActive = !this.isActive;
+        }
+    }
+});
+  </script>
+  </body>
+</html>
