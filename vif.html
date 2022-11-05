@@ -10,11 +10,11 @@
 <div id="app">
   <template v-if="type">
     <label>type1</label>
-    <input placeholder="type1">
+    <input placeholder="type1" key="type1">
   </template>
   <template v-else>
     <label>type2</label>
-    <input placeholder="type2">
+    <input placeholder="type2" key="type2">
   </template>
   <input type="button" @click="switchType()" value="Switch!">
 </div>
