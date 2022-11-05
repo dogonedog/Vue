@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ToDo アプリ</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3.0.0/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>ToDo アプリ</h1>
+<div id="app">
+  <template v-if="type">
+    <label>type1</label>
+    <input placeholder="type1">
+  </template>
+  <template v-else>
+    <label>type2</label>
+    <input placeholder="type2">
+  </template>
+  <input type="button" @click="switchType()" value="Switch!">
+</div>
+<script>
+  Vue.createApp({
+    data: function () {
+    return {
+      type: true,
+      }
+    },
+    methods: {
+      switchType(){
+        this.type = !this.type
+      }
+    },
+  }).mount('#app')
+</script>
+  </body>
+</html>
